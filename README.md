@@ -27,7 +27,8 @@ mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 
 | Method | Endpoint | Model Schema | Parameters | Response Messages | 
 | :---         | :---           | :---          | :---         | :---           | 
-| GET   | /example/v1/hotels    | ``` {
+| GET   | /example/v1/hotels    | ``` 
+{
   "content": [
     {
       "city": "string",
