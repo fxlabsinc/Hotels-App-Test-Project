@@ -25,18 +25,10 @@ mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 
 ### Supported REST APIs
 
-| Method | Endpoint | Model Schema | Parameters | Response Messages | 
-| :---         | :---           | :---          | :---         | :---           | 
-| GET   | /example/v1/hotels    |   content (Array[Hotel], optional),
-first (boolean, optional),
-last (boolean, optional),
-number (integer, optional),
-numberOfElements (integer, optional),
-size (integer, optional),
-sort (Sort, optional),
-totalElements (integer, optional),
-totalPages (integer, optional)    |       | git status     | 
-| POST     | /example/v1/hotels      | git diff      | git diff     | git diff       | 
-| DELETE   | /example/v1/hotels/{id}    | git status    | git status   | git status     | 
-| GET    | /example/v1/hotels/{id}      | git diff      | git diff     | git diff       | 
-| PUT   | /example/v1/hotels/{id}     | git status    | git status   | git status     | 
+| Method | Endpoint | Parameters | Response Messages |  
+| :---         | :---           | :---          | :---         | 
+| GET   | /example/v1/hotels    |       |       | git status     | 
+| POST     | /example/v1/hotels      | git diff      | git diff     | 
+| DELETE   | /example/v1/hotels/{id}    | git status    | git status   | 
+| GET    | /example/v1/hotels/{id}      | git diff      | git diff     | 
+| PUT   | /example/v1/hotels/{id}     | git status    | git status   |  
