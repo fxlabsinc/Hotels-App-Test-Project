@@ -47,8 +47,7 @@ mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
   "totalPages": 0
 }
 
- ```    | * page
- *size | git status     | 
+ ```    |       | git status     | 
 | POST     | /example/v1/hotels      | git diff      | git diff     | git diff       | 
 | DELETE   | /example/v1/hotels/{id}    | git status    | git status   | git status     | 
 | GET    | /example/v1/hotels/{id}      | git diff      | git diff     | git diff       | 
