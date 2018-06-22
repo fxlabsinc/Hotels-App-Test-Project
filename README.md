@@ -27,8 +27,8 @@ mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 
 | Method | Endpoint | Parameters | Response Messages |  
 | :---         | :---           | :---          | :---         | 
-| GET   | /example/v1/hotels    | page (page number), size (page size)      |  401 (Unauthorized), 403 (Forbidden), 404 (Not Found)     | 
-| POST     | /example/v1/hotels      |   "city": "string", "description": "string", "id": 0, "name": "string", "rating": 0      | 201 (Created), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)      | 
+| GET   | /example/v1/hotels    | page, size      |  401 (Unauthorized), 403 (Forbidden), 404 (Not Found)     | 
+| POST     | /example/v1/hotels      |   hotel      | 201 (Created), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)      | 
 | DELETE   | /example/v1/hotels/{id}    | id    | 204 (No Content), 401 (Unauthorized), 403 (Forbidden)    | 
 | GET    | /example/v1/hotels/{id}      | id     | 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)      | 
 | PUT   | /example/v1/hotels/{id}     | id, hotel    | 201 (Created), 204 (No Content), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)    |  
