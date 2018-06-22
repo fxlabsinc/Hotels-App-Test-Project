@@ -27,28 +27,7 @@ mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 
 | Method | Endpoint | Model Schema | Parameters | Response Messages | 
 | :---         | :---           | :---          | :---         | :---           | 
-| GET   | /example/v1/hotels    | ``` 
-{
-  "content": [
-    {
-      "city": "string",
-      "description": "string",
-      "id": 0,
-      "name": "string",
-      "rating": 0
-    }
-  ],
-  "first": true,
-  "last": true,
-  "number": 0,
-  "numberOfElements": 0,
-  "size": 0,
-  "sort": {},
-  "totalElements": 0,
-  "totalPages": 0
-}
-
- ```    |       | git status     | 
+| GET   | /example/v1/hotels    |       |       | git status     | 
 | POST     | /example/v1/hotels      | git diff      | git diff     | git diff       | 
 | DELETE   | /example/v1/hotels/{id}    | git status    | git status   | git status     | 
 | GET    | /example/v1/hotels/{id}      | git diff      | git diff     | git diff       | 
