@@ -27,8 +27,8 @@ mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 
 | Method | Endpoint | Parameters | Response Messages |  
 | :---         | :---           | :---          | :---         | 
-| GET   | /example/v1/hotels    |       |       | git status     | 
-| POST     | /example/v1/hotels      | git diff      | git diff     | 
-| DELETE   | /example/v1/hotels/{id}    | git status    | git status   | 
-| GET    | /example/v1/hotels/{id}      | git diff      | git diff     | 
-| PUT   | /example/v1/hotels/{id}     | git status    | git status   |  
+| GET   | /example/v1/hotels    | page (page number), size (page size)      |  401 (Unauthorized), 403 (Forbidden), 404 (Not Found)     | 
+| POST     | /example/v1/hotels      | git diff      | 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)      | 
+| DELETE   | /example/v1/hotels/{id}    | git status    | 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)    | 
+| GET    | /example/v1/hotels/{id}      | git diff      | 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)      | 
+| PUT   | /example/v1/hotels/{id}     | git status    | 401 (Unauthorized), 403 (Forbidden), 404 (Not Found)    |  
