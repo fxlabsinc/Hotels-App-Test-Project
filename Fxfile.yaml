@@ -33,11 +33,11 @@ environments:
   - name: Dev
     baseUrl: http://18.144.38.115:8090/example/v1/hotels
     # app access credentials
-    #auths:
+    auths:
     #  - name: Default
-    #    authType: BASIC
-    #    username: admin
-    #    password: '{{@Vault.FxLabs/DevMachinePassword}}'
+      authType: BASIC
+      username: admin
+      password: admin
 # Job profiles
 jobs:
   - name: Dev
