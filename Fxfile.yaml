@@ -34,10 +34,11 @@ environments:
     baseUrl: http://18.144.38.115:8090/example/v1/hotels
     # app access credentials
     auths:
-    #  - name: Default
-      authType: BASIC
-      username: admin
-      password: admin
+      - name: Default
+        # authType: Basic, OAuth_2_0, Token
+        authType: Basic
+        username: username@example.com
+        password: mypassword
 # Job profiles
 jobs:
   - name: Dev
