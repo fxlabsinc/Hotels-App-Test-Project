@@ -1,0 +1,88 @@
+#Auto Code Configuration
+
+databases:
+  - name: MySQL
+    version: 5.0
+    description: test
+    inactive: false
+  
+  - name: Oracle
+    version: 5.0
+    description: test
+    inactive: true
+  
+  - name: Postgres
+    version: 5.0
+    description: test
+    inactive: true
+  
+  - name: SQLServer
+    version: 5.0
+    description: test
+    inactive: true
+    
+logForgingPatterns:
+  - "INFO:(a-z|A-Z|0-9|.|!|@|#|$|%|&)+"
+  - "DEBUG:(a-z|A-Z|0-9|.|!|@|#|$|%|&)+"
+  - "ERROR:"
+  
+testSuites:
+  - category: anonymous_invalid
+    postfix: anonymous_invalid
+    assertions:
+      - "@StatusCode != 200"
+      
+  - category: auth_invalid
+    postfix: auth_invalid
+    assertions:
+      - "@StatusCode != 200"
+      
+  - category: DDOS
+    postfix: DDOS
+    assertions:
+      - "@StatusCode != 200"
+      
+  - category: XSS_Injection
+    postfix: XSS_Injection
+    assertions:
+      - "@StatusCode != 200"
+      
+  - category: sql_injection
+    postfix: sql_injection
+    assertions:
+      - "@StatusCode != 200"
+
+  - category: log_forging
+    postfix: log_forging
+    assertions:
+      - "@StatusCode != 200"
+
+  - category: invalid_datatype
+    postfix: invalid_datatype
+    assertions:
+      - "@StatusCode != 200"
+
+  - category: special_chars
+    postfix: special_chars
+    assertions:
+      - "@StatusCode != 200"
+
+  - category: negative
+    postfix: negative
+    assertions:
+      - "@StatusCode != 200"
+      
+  - category: null_value
+    postfix: null_value
+    assertions:
+      - "@StatusCode != 200"
+
+  - category: empty_value
+    postfix: empty_value
+    assertions:
+      - "@StatusCode != 200"
+
+  - category: create
+    postfix: create
+    assertions:
+      - "@StatusCode == 200"
