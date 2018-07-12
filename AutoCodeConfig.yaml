@@ -22,67 +22,93 @@ databases:
     inactive: true
     
 logForgingPatterns:
-  - "INFO:(a-z|A-Z|0-9|.|!|@|#|$|%|&)+"
-  - "DEBUG:(a-z|A-Z|0-9|.|!|@|#|$|%|&)+"
-  - "ERROR:"
-  
+#  - "INFO:(a-z|A-Z|0-9|.|!|@|#|$|%|&)+"
+#  - "DEBUG:(a-z|A-Z|0-9|.|!|@|#|$|%|&)+"
+#  - "ERROR:"
+
 testSuites:
-  - category: anonymous_invalid
-    postfix: anonymous_invalid
+  - category: UnSecured
+    #category: UnSecured / XSS_Injection / DDOS / SQL_Injection / Log_Forging / Functional / Negative
+    scenario: anonymous_invalid
+    #postfix: anonymous_invalid
     assertions:
       - "@StatusCode != 200"
+    severity: Critical
+    #severity:  Critical/Major/Minor/Trivial
       
-  - category: auth_invalid
+  - category: UnSecured
+    scenario: auth_invalid
     postfix: auth_invalid
     assertions:
       - "@StatusCode != 200"
+    severity: Critical
       
   - category: DDOS
-    postfix: DDOS
+    scenario: DDOS  
+    #postfix: Max_Int_DDOS
     assertions:
       - "@StatusCode != 200"
+    severity: Critical
       
   - category: XSS_Injection
+    scenario: XSS_Injection
     postfix: XSS_Injection
     assertions:
       - "@StatusCode != 200"
+    severity: Critical
       
-  - category: sql_injection
+  - category: SQL_Injection
+    scenario: sql_injection
     postfix: sql_injection
     assertions:
       - "@StatusCode != 200"
+    severity: Critical
 
-  - category: log_forging
+  - category: Log_Forging
+    scenario: log_forging
     postfix: log_forging
     assertions:
       - "@StatusCode != 200"
+    severity: Major
 
-  - category: invalid_datatype
+  - category: Negative
+    scenario: invalid_datatype
     postfix: invalid_datatype
     assertions:
       - "@StatusCode != 200"
+    severity: Critical
 
-  - category: special_chars
+  - category: Negative
+    scenario: special_chars
     postfix: special_chars
     assertions:
       - "@StatusCode != 200"
+    severity: Minor
 
-  - category: negative
-    postfix: negative
+  - category: Negative
+    scenario: Negative
+    postfix: Negative
     assertions:
       - "@StatusCode != 200"
+    severity: Major
       
-  - category: null_value
+  - category: Negative
+    scenario: null_value
     postfix: null_value
     assertions:
       - "@StatusCode != 200"
+    severity: Minor
 
-  - category: empty_value
+  - category: Negative
+    scenario: empty_value
     postfix: empty_value
     assertions:
       - "@StatusCode != 200"
+    severity: Major
 
-  - category: create
+  - category: Functional
+    scenario: create
     postfix: create
     assertions:
       - "@StatusCode == 200"
+    severity: Critical
